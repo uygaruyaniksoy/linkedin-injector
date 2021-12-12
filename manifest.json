@@ -1,0 +1,17 @@
+{
+  "name": "Linkedin Injector",
+  "description": "An extension to inject random user data in a new card on a linkedin profile",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+     "matches": ["https://*.linkedin.com/in/*"],
+     "js": ["content.js"],
+     "css": ["style.css"]
+    }
+  ]
+
+}
